@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 900px;
+    height: 600px;
+    margin: 100px auto;
+}
+
+.image_container {
+    height: 100%;
+    width: 100%;
+
+    background-image: url(./images/bmw-1.jpg);
+    background-position: center;
+    background-size: cover;
+
+    transition: background-image 0.4s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.left_arrow_container,
+.right_arrow_container {
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    user-select: none;
+}
+
+.left_arrow_container:hover,
+.right_arrow_container:hover {
+    background-color: rgba(24, 24, 24, 0.655);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid rgb(205, 198, 198);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    margin: 15px;
+    padding: 3px;
+    width: 10px;
+    height: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    margin-right: 30px;
+}
+
+.indicators_container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    user-select: none;
+}
+
+.indicator {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(199, 194, 194);
+    border-radius: 50%;
+}
+
+.current_indicator {
+    background-color: rgb(100, 98, 98);
+}
+
+
+@media (max-width: 920px) {
+    .container {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 620px) {
+    .container {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 415px) {
+    .container {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 325px) {
+    .container {
+        width: 250px;
+        height: 150px;
+    }
+}
